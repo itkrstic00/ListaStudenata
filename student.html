@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Lista studenata
+    </title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "textArea">
+
+    </div>
+    <script>
+
+    //fetch('https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt').then(response => response.text()).then(data => console.log(data));
+    let textArea = document.getElementById("textArea")
+    fetch('https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt').then(function (response) {
+        return response.text();
+    }).then(function(text){
+        textArea.innerText = text;
+        for(i=0;i<text.length;i++){
+            var red = i;
+            
+        }
+    });
+    
+
+        function Student(name, adress, phone, course) {
+            this.name = name;
+            this.adress = adress;
+            this.phone = phone;
+            this.course = course;
+            this.ispis = function () {
+                return "Student: " + this.name + " adresa: " + this.adress + " mobilni: " + this.phone + " Predmet: " + this.course;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
